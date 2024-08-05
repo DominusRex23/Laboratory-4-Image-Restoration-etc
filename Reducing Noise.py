@@ -1,7 +1,6 @@
 from skimage.restoration import denoise_tv_chambolle
 import matplotlib.pyplot as plt
 
-# Define the plot_comparison function
 def plot_comparison(original, modified, title):
     fig, (ax1, ax2) = plt.subplots(ncols=2, figsize=(10, 8), sharex=True, sharey=True)
     ax1.imshow(original)
@@ -12,11 +11,10 @@ def plot_comparison(original, modified, title):
     ax2.axis('off')
     plt.show()
 
-# Load your image here
-noisy_image = plt.imread(r"Garcia.jpg")  # Change this line
 
-# Apply total variation filter denoising
+noisy_image = plt.imread(r"Garcia.jpg")  
+
+
 denoised_image = denoise_tv_chambolle(noisy_image, channel_axis=-1)
 
-# Show the noisy and denoised image
 plot_comparison(noisy_image, denoised_image, 'Denoised Image')

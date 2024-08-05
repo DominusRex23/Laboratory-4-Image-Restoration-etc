@@ -1,10 +1,9 @@
 from skimage.util import random_noise
 import matplotlib.pyplot as plt
 
-# Load your image here
+
 artist_image = plt.imread(r"Garcia.jpg")
 
-# Add noise to the image
 noisy_image = random_noise(artist_image)
 
 

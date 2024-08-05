@@ -1,6 +1,6 @@
 from PIL import Image
 
-# Open an image file
-with Image.open('Garcia.jpg') as img:  # Change this line
-    # Compress the image
+
+with Image.open('Garcia.jpg') as img:  
+    
     img.save('pillow_compressed_Garcia.jpg', quality=30, optimize=True)
